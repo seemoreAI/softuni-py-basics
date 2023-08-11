@@ -1,15 +1,15 @@
 n = int(input())
 m = int(input())
-sum_odd = 0
-sum_even = 0
+sum_odd = sum_even = 0
 
-for i in range(n, m+1):
-    for j in range(0,len(str(n)),2):
-        str_i = str(i)
-        sum_odd += int(str_i[j])
-        sum_even += int(str_i[j+1])
+for number in range(n, m+1):
+    for j, digit in enumerate(str(number)):
+        if j % 2 == 0:
+            sum_odd += int(digit)
+        else:
+            sum_even += int(digit)
     if sum_odd == sum_even:
-        print(i, end=' ')
+        print(number, end=' ')
     sum_odd = 0
     sum_even = 0
 
