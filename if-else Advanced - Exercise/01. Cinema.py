@@ -15,4 +15,18 @@ elif scr_type == 'Discount':
     price = places * 5
 else:
     price = 0
+
+#following script is better, but only works in python after 3.10
+#Judge will not be able to handle it, until update.
+
+# match scr_type:
+#     case 'Premiere':
+#         price = places * 12
+#     case 'Normal':
+#         price = places * 7.5
+#     case 'Discount':
+#          price = places * 5
+#     case _:
+#          price = 0
+
 print(f'{price:.2f}')
